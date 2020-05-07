@@ -73,7 +73,7 @@ curl --silent --output /usr/local/bin/lein "https://raw.githubusercontent.com/te
 chmod a+x /usr/local/bin/lein
 
 # Install go
-GO_VERSION="1.11.1"
+GO_VERSION="1.14.2"
 curl --silent --output /tmp/go.tar.gz "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz"
 sudo --user vagrant tar -C /home/vagrant -xzf /tmp/go.tar.gz
 mv /home/vagrant/go /home/vagrant/go${GO_VERSION}
