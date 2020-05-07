@@ -106,12 +106,7 @@ export LEIN_GPG=/usr/bin/gpg2
 
 export GOROOT=\${HOME}/go
 export PATH=\${PATH}:\${GOROOT}/bin
-
-if ! pgrep socat > /dev/null 2>&1; then
-  mkdir -p /home/vagrant/.gnupg
-  rm -f /home/vagrant/.gnupg/S.gpg-agent
-  nohup socat -s -d -d -ly "UNIX-LISTEN:/home/vagrant/.gnupg/S.gpg-agent,reuseaddr,fork" "TCP-CONNECT:localhost:60111" &
-fi
+export CDPATH=:/home/vagrant/Development
 
 if ! shopt -oq posix; then
   if [ -e ~/.bash_completion ]; then
