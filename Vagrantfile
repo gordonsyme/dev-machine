@@ -6,13 +6,13 @@ def share_home(config, dir)
 end
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "bento/ubuntu-20.04"
 
   config.vm.network "private_network", type: "dhcp"
 
   config.vm.synced_folder File.expand_path("~/Development"), "/home/vagrant/Development" #, type: "nfs"
 
-  [".m2", ".lein", ".vim"].each do |dir|
+  [".m2", ".lein", ".vim", ".aws"].each do |dir|
     share_home(config, dir)
   end
 
