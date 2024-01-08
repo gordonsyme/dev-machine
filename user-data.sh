@@ -74,7 +74,7 @@ curl --silent --output /usr/local/bin/lein "https://raw.githubusercontent.com/te
 chmod a+x /usr/local/bin/lein
 
 # Install gordonsyme/docker-tools
-curl --location --output /usr/bin/yq "https://github.com/mikefarah/yq/releases/v4.34.2/download/yq_linux_arm64"
+curl --location --output /usr/bin/yq "https://github.com/mikefarah/yq/releases/download/v4.34.2/yq_linux_arm64"
 chmod a+x /usr/bin/yq
 sudo --set-home --user=ubuntu mkdir /home/ubuntu/bin
 sudo --set-home --user=ubuntu curl \
